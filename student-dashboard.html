@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Dashboard | SIWES</title>
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+<div id="loading">
+  <div class="spinner"></div>
+  <div style="font-size:14px;color:#637389;">Loading your dashboard…</div>
+</div>
+
+<div id="app">
+  <div class="topbar">
+    <div class="topbar-brand">
+      <img src="assets/siwes_logo.png" alt="" class="topbar-logo-img"
+           onerror="this.outerHTML='<span class=&quot;topbar-logo-emoji&quot;>🎓</span>'">
+      SIWES <span>Student Portal</span>
+    </div>
+    <div class="topbar-right">
+      <div class="topbar-user">
+        <div class="avatar" id="avatarInitial">?</div>
+        <div>
+          <div id="topbarName" style="font-weight:600;font-size:13px;">—</div>
+          <div class="role-badge">student</div>
+        </div>
+      </div>
+      <button class="btn-logout" onclick="logout()">Sign out</button>
+    </div>
+  </div>
+
+  <div class="layout">
+    <nav class="sidebar" id="sidebar"></nav>
+    <main class="main" id="mainContent"></main>
+  </div>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+<script src="js/jsfirebase-config.js"></script>
+
+<script src="js/ai-assistant.js"></script>
+<script src="js/student-dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login | SIWES</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+<div class="login-card">
+    <img src="assets/siwes_logo.png" alt="SIWES Logo" class="logo-img"
+         onerror="this.outerHTML='<div class=&quot;logo&quot;>ITF</div>'">
+
+    <span class="portal-tag">Admin Portal</span>
+    <h1>Admin sign in</h1>
+    <p class="subtitle">For ITF / host-body staff only</p>
+
+    <div class="input-group">
+        <label>Email Address</label>
+        <input type="email" id="loginEmail" placeholder="Enter your email">
+    </div>
+
+    <div class="input-group">
+        <label>Password</label>
+        <input type="password" id="loginPassword" placeholder="Enter your password">
+    </div>
+
+    <button onclick="loginAdmin()">Login</button>
+
+    <p class="footnote">Not an admin? Close this page and use your portal link instead.</p>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+<script src="js/jsfirebase-config.js"></script>
+<script src="js/admin-auth.js"></script>
+</body>
+</html>
