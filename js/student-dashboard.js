@@ -77,11 +77,7 @@ function renderShell() {
   switchPage('overview');
 }
 
-// ── First-login placement profile gate ───────────────────────
-// Students are created by an admin with no placement info attached (the
-// admin doesn't know it). Before a student can reach the normal dashboard,
-// they must fill this in once; this also drives the "Flagged by AI" style
-// visibility the supervisor needs into where the student is placed.
+
 function renderProfileGate() {
   document.getElementById('avatarInitial').textContent = initials(currentProfile.fullname);
   document.getElementById('topbarName').textContent = currentProfile.fullname || currentUser.email;

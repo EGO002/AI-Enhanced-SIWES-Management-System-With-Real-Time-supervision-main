@@ -20,3 +20,23 @@ function loginSupervisor() {
         })
         .catch(error => alert(error.message));
 }
+
+document.getElementById("forgotPasswordLink").addEventListener("click", function (e) {
+  e.preventDefault();
+
+  var email = document.getElementById("loginEmail").value;
+
+  if (!email) {
+    alert("Please type your email into the Email Address box first, then click Forgot Password.");
+    return;
+  }
+
+  firebase.auth().sendPasswordResetEmail(email)
+    .then(function () {
+      alert("A password reset link has been sent to " + email + ". Please check your inbox.");
+    })
+    .catch(function (error) {
+      console.error(error);
+      alert("Couldn't send reset email: " + error.message);
+    });
+});
